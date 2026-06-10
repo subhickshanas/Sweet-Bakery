@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bakery - Product Details</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="product-details-body">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🧁 Sweet Bakery</div>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart <span id="cartCount">0</span></a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><button id="logoutBtn" class="logout-btn">Logout</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="home.html">Home</a> / <a href="products.html">Products</a> / <span id="productBreadcrumb">Product</span>
+        </div>
+    </div>
+
+    <!-- Product Details -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-details-grid">
+                <!-- Product Image Gallery -->
+                <div class="product-image-section">
+                    <div class="product-main-image">
+                        <img id="mainImage" src="" alt="Product">
+                    </div>
+                    <div class="product-thumbnails">
+                        <img id="thumb1" class="thumbnail active" src="" alt="Thumbnail 1">
+                        <img id="thumb2" class="thumbnail" src="" alt="Thumbnail 2">
+                        <img id="thumb3" class="thumbnail" src="" alt="Thumbnail 3">
+                    </div>
+                </div>
+
+                <!-- Product Information -->
+                <div class="product-info-section">
+                    <h1 id="productName" class="product-name">Product Name</h1>
+                    
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="reviews">(245 reviews)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span id="productPrice" class="price">$0.00</span>
+                        <span id="productDiscount" class="discount"></span>
+                    </div>
+
+                    <p id="productDescription" class="product-description">
+                        Product description goes here.
+                    </p>
+
+                    <!-- Ingredients -->
+                    <div class="product-details-group">
+                        <h3>Ingredients</h3>
+                        <p id="productIngredients" class="ingredients-list">
+                            Ingredients list will be displayed here.
+                        </p>
+                    </div>
+
+                    <!-- Nutrition Info -->
+                    <div class="product-details-group">
+                        <h3>Nutrition Information (per 100g)</h3>
+                        <div class="nutrition-grid" id="nutritionInfo">
+                            <!-- Nutrition info will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-control">
+                            <button id="decreaseQty" class="qty-btn">−</button>
+                            <input type="number" id="quantity" value="1" min="1" max="100">
+                            <button id="increaseQty" class="qty-btn">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="product-actions">
+                        <button id="addToCartBtn" class="btn-primary">Add to Cart</button>
+                        <button id="buyNowBtn" class="btn-secondary">Buy Now</button>
+                        <button id="addToWishlistBtn" class="btn-wishlist">❤️ Add to Wishlist</button>
+                    </div>
+
+                    <!-- Stock Status -->
+                    <div class="stock-status">
+                        <p id="stockStatus">✓ In Stock</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">Related Products</h2>
+            <div class="products-grid" id="relatedProductsGrid">
+                <!-- Related products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Sweet Bakery</h3>
+                    <p>Freshly baked with love every day. Premium bakery delights for every occasion.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Baker Street, City</p>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>📧 info@sweetbakery.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sweet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
