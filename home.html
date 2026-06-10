@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bakery - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="home-body">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🧁 Sweet Bakery</div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart <span id="cartCount">0</span></a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><button id="logoutBtn" class="logout-btn">Logout</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">SWEET BAKERY</h1>
+            <p class="hero-tagline">Freshly Baked with Love Every Day</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn-primary">Shop Now</a>
+                <a href="#featured" class="btn-secondary">View Products</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid" id="featuredProductsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Sweet Bakery?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌾</div>
+                    <h3>Premium Ingredients</h3>
+                    <p>We use only the finest, freshest ingredients sourced from trusted suppliers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Expert Bakers</h3>
+                    <p>Our experienced bakers craft each item with passion and precision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Fresh Daily</h3>
+                    <p>Everything is baked fresh daily to ensure maximum freshness and quality.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Custom Orders</h3>
+                    <p>We offer custom orders for special occasions and celebrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="special-offers">
+        <div class="container">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <h3>Summer Delights</h3>
+                    <p class="offer-discount">20% OFF</p>
+                    <p>On all fresh fruit cakes this season</p>
+                    <a href="products.html" class="btn-small">Shop Now</a>
+                </div>
+                <div class="offer-card">
+                    <h3>Bundle Deals</h3>
+                    <p class="offer-discount">Buy 3, Get 1 FREE</p>
+                    <p>On selected cupcakes and pastries</p>
+                    <a href="products.html" class="btn-small">Shop Now</a>
+                </div>
+                <div class="offer-card">
+                    <h3>Loyalty Rewards</h3>
+                    <p class="offer-discount">Earn Points</p>
+                    <p>Every purchase earns you loyalty points</p>
+                    <a href="products.html" class="btn-small">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Preview -->
+    <section class="categories-preview">
+        <div class="container">
+            <h2 class="section-title">Our Categories</h2>
+            <div class="categories-grid">
+                <a href="products.html?category=cakes" class="category-card">
+                    <div class="category-icon">🎂</div>
+                    <h3>Cakes</h3>
+                </a>
+                <a href="products.html?category=cupcakes" class="category-card">
+                    <div class="category-icon">🧁</div>
+                    <h3>Cupcakes</h3>
+                </a>
+                <a href="products.html?category=pastries" class="category-card">
+                    <div class="category-icon">🥐</div>
+                    <h3>Pastries</h3>
+                </a>
+                <a href="products.html?category=cookies" class="category-card">
+                    <div class="category-icon">🍪</div>
+                    <h3>Cookies</h3>
+                </a>
+                <a href="products.html?category=bread" class="category-card">
+                    <div class="category-icon">🍞</div>
+                    <h3>Bread</h3>
+                </a>
+                <a href="products.html?category=donuts" class="category-card">
+                    <div class="category-icon">🍩</div>
+                    <h3>Donuts</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Customer Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Sweet Bakery's cakes are absolutely divine! Every bite is pure heaven. Highly recommended!"</p>
+                    <p class="testimonial-author">- Sarah M.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The best cupcakes I've ever had. Fresh, delicious, and beautifully decorated. Will order again!"</p>
+                    <p class="testimonial-author">- John D.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Amazing quality and customer service. Sweet Bakery is my go-to for all special occasions."</p>
+                    <p class="testimonial-author">- Emily R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get updates on new products, special offers, and baking tips!</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Sweet Bakery</h3>
+                    <p>Freshly baked with love every day. Premium bakery delights for every occasion.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Baker Street, City</p>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>📧 info@sweetbakery.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sweet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
