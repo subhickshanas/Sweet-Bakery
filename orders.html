@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bakery - Orders</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="orders-body">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🧁 Sweet Bakery</div>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart <span id="cartCount">0</span></a></li>
+                <li><a href="orders.html" class="active">Orders</a></li>
+                <li><button id="logoutBtn" class="logout-btn">Logout</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Orders Header -->
+    <section class="orders-header">
+        <div class="container">
+            <h1>My Orders</h1>
+            <p>Track and manage your orders</p>
+        </div>
+    </section>
+
+    <!-- Orders Content -->
+    <section class="orders-content">
+        <div class="container">
+            <!-- Orders List -->
+            <div id="ordersContainer" class="orders-list">
+                <!-- Orders will be loaded here -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyOrdersMessage" class="empty-state" style="display: none;">
+                <p>You haven't placed any orders yet</p>
+                <a href="products.html" class="btn-primary">Start Shopping</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Tracking Info -->
+    <section class="tracking-info">
+        <div class="container">
+            <h2>Order Status Guide</h2>
+            <div class="status-guide">
+                <div class="status-item">
+                    <div class="status-icon processing">📋</div>
+                    <h3>Processing</h3>
+                    <p>Your order is being prepared and confirmed</p>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon baking">🍰</div>
+                    <h3>Baking</h3>
+                    <p>Your delicious items are being freshly baked</p>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon delivery">🚚</div>
+                    <h3>Out For Delivery</h3>
+                    <p>Your order is on its way to you</p>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon delivered">✓</div>
+                    <h3>Delivered</h3>
+                    <p>Your order has been successfully delivered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Sweet Bakery</h3>
+                    <p>Freshly baked with love every day. Premium bakery delights for every occasion.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Baker Street, City</p>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>📧 info@sweetbakery.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sweet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
